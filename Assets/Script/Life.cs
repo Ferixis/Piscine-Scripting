@@ -35,9 +35,9 @@ public class Life : MonoBehaviour
     }
 
 
-    void OntriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        (collision.gameObject.tag = "Obstacles");
+        if (other.CompareTag("Obstacles"))
         CurHealth = -1;
         Debug.Log("Hit");
     }
