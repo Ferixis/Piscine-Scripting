@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMoves : MonoBehaviour {
 
+    // Moves //
 	public float spdShip;
     public float maxSpd;
     public float straffMaxSpeed;
@@ -11,13 +12,15 @@ public class PlayerMoves : MonoBehaviour {
     private Rigidbody rbShip;
     private float smoothXVelocity;
 
-	// Use this for initialization
-	void Awake () 
+    // Shoot //
+    public GameObject projectileToShoot;
+
+
+    void Awake () 
 	{
 		rbShip = GetComponent<Rigidbody>();
 	}
 	
-	// Update is called once per frame
 	void FixedUpdate () 
 	{
         Vector3 newVelocity = rbShip.velocity;
@@ -34,12 +37,26 @@ public class PlayerMoves : MonoBehaviour {
         float targetVelocity = Input.GetAxis("Horizontal") * straffMaxSpeed;
         newVelocity.x = Mathf.SmoothDamp(newVelocity.x, targetVelocity, ref smoothXVelocity, Time.deltaTime);
         rbShip.velocity = newVelocity;
-	}	
+	}
 
-	void LateUpdate () 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            Shoot();
+        }
+    }
+
+    void LateUpdate () 
 	{
 		Debug.Log(rbShip.velocity.z);
 	}
+
+    void Shoot ()
+    {
+        Instantiate(projectileToShoot);
+        projectileToShoot.GetComponent<Rigidbody>().velocity = projectileToShoot.transform.forward * 100;
+    }
 }
 
 

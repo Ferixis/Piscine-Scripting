@@ -1445,6 +1445,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5109b4621e19614ca9f84405eb71a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameras:
+  - {fileID: 1990433453}
+  - {fileID: 104739807}
+  - {fileID: 106609449}
 --- !u!4 &1402861344
 Transform:
   m_ObjectHideFlags: 0
@@ -1538,7 +1542,7 @@ GameObject:
   - component: {fileID: 1465166669}
   - component: {fileID: 1465166668}
   m_Layer: 0
-  m_Name: Canon
+  m_Name: CanonRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1628,6 +1632,8 @@ MonoBehaviour:
   maxSpd: 50
   straffMaxSpeed: 8
   straffTime: 5
+  projectileToShoot: {fileID: 1553744080704550, guid: 56f839bad76d9b0488acc06e2dceb7cc,
+    type: 2}
 --- !u!54 &1511951402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1642,7 +1648,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!4 &1511951403
 Transform:
   m_ObjectHideFlags: 0
@@ -1673,7 +1679,7 @@ GameObject:
   - component: {fileID: 1556609121}
   - component: {fileID: 1556609120}
   m_Layer: 0
-  m_Name: Canon (1)
+  m_Name: CanonLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
