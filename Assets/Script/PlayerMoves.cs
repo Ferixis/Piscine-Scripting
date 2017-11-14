@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerMoves : MonoBehaviour {
 
-    // Moves //
-
 	public float spdShip;
     public float maxSpd;
     public float straffMaxSpeed;
@@ -14,13 +12,12 @@ public class PlayerMoves : MonoBehaviour {
     private Rigidbody rbShip;
     private float smoothXVelocity;
 
-    // Shoot //
-
     public GameObject projectileToShoot;
     public float projectileSpd;
     public Transform rightCanonSpawn;
     public Transform leftCanonSpawn;
-    public AudioSource shot;
+    public GameObject shot;
+    private AudioClip shotSnd; 
 
     private GameObject projectileRight;
     private GameObject projectileLeft;
@@ -64,8 +61,8 @@ public class PlayerMoves : MonoBehaviour {
 
     void Shoot ()
     {
-        AudioSource shot = GetComponent<AudioSource>();
-        shot.Play();
+        AudioSource shotSnd = shot.GetComponent<AudioSource>();
+        shotSnd.Play();
 
         projectileRight = Instantiate(projectileToShoot,rightCanonSpawn.position,rightCanonSpawn.rotation);
         projectileLeft = Instantiate(projectileToShoot, leftCanonSpawn.position, leftCanonSpawn.rotation);
