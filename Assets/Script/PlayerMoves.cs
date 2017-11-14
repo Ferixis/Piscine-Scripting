@@ -5,18 +5,25 @@ using UnityEngine;
 public class PlayerMoves : MonoBehaviour {
 
     // Moves //
+
 	public float spdShip;
     public float maxSpd;
     public float straffMaxSpeed;
     public float straffTime = 0f;
+
     private Rigidbody rbShip;
     private float smoothXVelocity;
 
     // Shoot //
+
     public GameObject projectileToShoot;
     public float projectileSpd;
     public Transform rightCanonSpawn;
     public Transform leftCanonSpawn;
+
+    private GameObject projectileRight;
+    private GameObject projectileLeft;
+
 
     void Awake () 
 	{
@@ -56,12 +63,14 @@ public class PlayerMoves : MonoBehaviour {
 
     void Shoot ()
     {
-        Instantiate(projectileToShoot,rightCanonSpawn.position,rightCanonSpawn.rotation);
-        Instantiate(projectileToShoot, leftCanonSpawn.position, leftCanonSpawn.rotation);
+       projectileRight = Instantiate(projectileToShoot,rightCanonSpawn.position,rightCanonSpawn.rotation);
+       projectileLeft = Instantiate(projectileToShoot, leftCanonSpawn.position, leftCanonSpawn.rotation);
 
-        projectileToShoot.GetComponent<Rigidbody>().velocity = projectileToShoot.transform.forward * projectileSpd;
+        projectileRight.GetComponent<Rigidbody>().velocity = projectileRight.transform.forward * projectileSpd;
+        projectileLeft.GetComponent<Rigidbody>().velocity = projectileLeft.transform.forward * projectileSpd;
 
-        Destroy(projectileToShoot, 3.0f);
+        Destroy(projectileRight, 2.0f);
+        Destroy(projectileLeft, 2.0f);
     }
 }
 
