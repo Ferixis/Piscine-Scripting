@@ -20,6 +20,7 @@ public class PlayerMoves : MonoBehaviour {
     public float projectileSpd;
     public Transform rightCanonSpawn;
     public Transform leftCanonSpawn;
+    public AudioSource shot;
 
     private GameObject projectileRight;
     private GameObject projectileLeft;
@@ -63,8 +64,11 @@ public class PlayerMoves : MonoBehaviour {
 
     void Shoot ()
     {
-       projectileRight = Instantiate(projectileToShoot,rightCanonSpawn.position,rightCanonSpawn.rotation);
-       projectileLeft = Instantiate(projectileToShoot, leftCanonSpawn.position, leftCanonSpawn.rotation);
+        AudioSource shot = GetComponent<AudioSource>();
+        shot.Play();
+
+        projectileRight = Instantiate(projectileToShoot,rightCanonSpawn.position,rightCanonSpawn.rotation);
+        projectileLeft = Instantiate(projectileToShoot, leftCanonSpawn.position, leftCanonSpawn.rotation);
 
         projectileRight.GetComponent<Rigidbody>().velocity = projectileRight.transform.forward * projectileSpd;
         projectileLeft.GetComponent<Rigidbody>().velocity = projectileLeft.transform.forward * projectileSpd;
