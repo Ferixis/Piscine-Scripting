@@ -60,6 +60,8 @@ public class PlayerMoves : MonoBehaviour {
         Instantiate(projectileToShoot, leftCanonSpawn.position, leftCanonSpawn.rotation);
 
         projectileToShoot.GetComponent<Rigidbody>().velocity = projectileToShoot.transform.forward * projectileSpd;
+
+        Destroy(projectileToShoot, 3.0f);
     }
 }
 
