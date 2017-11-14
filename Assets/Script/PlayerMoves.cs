@@ -14,7 +14,9 @@ public class PlayerMoves : MonoBehaviour {
 
     // Shoot //
     public GameObject projectileToShoot;
-
+    public float projectileSpd;
+    public Transform rightCanonSpawn;
+    public Transform leftCanonSpawn;
 
     void Awake () 
 	{
@@ -54,8 +56,10 @@ public class PlayerMoves : MonoBehaviour {
 
     void Shoot ()
     {
-        Instantiate(projectileToShoot);
-        projectileToShoot.GetComponent<Rigidbody>().velocity = projectileToShoot.transform.forward * 100;
+        Instantiate(projectileToShoot,rightCanonSpawn.position,rightCanonSpawn.rotation);
+        Instantiate(projectileToShoot, leftCanonSpawn.position, leftCanonSpawn.rotation);
+
+        projectileToShoot.GetComponent<Rigidbody>().velocity = projectileToShoot.transform.forward * projectileSpd;
     }
 }
 
