@@ -76,8 +76,12 @@ public class LevelManager : MonoBehaviour {
     {
         PlayerMoves player = plane.GetComponentInParent<PlayerMoves>();
     }
+<<<<<<< HEAD
 
 =======
 >>>>>>> ce787c4e676f09f0d7c14ab10b883874ff1f7e2d
+=======
+    //
+>>>>>>> c6b9067a029fac0d44a6d7de0aa0a58c654ed826
     }
 
