@@ -13,6 +13,7 @@ public class PlayerMoves : MonoBehaviour {
 
     private Rigidbody rbShip;
     private float smoothXVelocity;
+    private float smoothYVelocity;
 
     // Shot //
 
@@ -48,10 +49,15 @@ public class PlayerMoves : MonoBehaviour {
             newVelocity.z += spdShip * Time.deltaTime;
         }
 
-        float targetVelocity = Input.GetAxis("Horizontal") * straffMaxSpeed;
-        newVelocity.x = Mathf.SmoothDamp(newVelocity.x, targetVelocity, ref smoothXVelocity, Time.deltaTime);
-        rbShip.velocity = newVelocity;
-	}
+            float targetVelocityX = Input.GetAxis("Horizontal") * straffMaxSpeed;
+            newVelocity.x = Mathf.SmoothDamp(newVelocity.x, targetVelocityX, ref smoothXVelocity, Time.deltaTime);
+            rbShip.velocity = newVelocity;
+
+            float targetVelocityY = Input.GetAxis("Vertical") * straffMaxSpeed;
+            newVelocity.y = Mathf.SmoothDamp(newVelocity.y, targetVelocityY, ref smoothXVelocity, Time.deltaTime);
+            rbShip.velocity = newVelocity;
+
+    }
 
     void Update()
     {
