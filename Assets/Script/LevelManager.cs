@@ -61,5 +61,17 @@ public class LevelManager : MonoBehaviour {
     }
 
 
+    private void KillPlayer()
+    {
+
+        if (CurHealth <= 0)
+        {
+
+            CurHealth = 0;
+          
+        }
+
+    }
+
     }
 
