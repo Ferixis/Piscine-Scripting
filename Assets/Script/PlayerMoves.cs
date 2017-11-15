@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMoves : MonoBehaviour {
+public class PlayerMoves : MonoBehaviour,ITakeDamage {
 
     // Move //
 
@@ -26,6 +26,8 @@ public class PlayerMoves : MonoBehaviour {
 
     private GameObject projectileRight;
     private GameObject projectileLeft;
+
+    private int CurHealth;
 
     // Speed Boost // 
 
@@ -93,6 +95,31 @@ public class PlayerMoves : MonoBehaviour {
         //Debug.Log(spdShip);
         // piojkq
     }
+
+    public void TakeDamage(int damage)
+    {
+
+        CurHealth -= damage;
+        Debug.Log("HIT");
+
+        if(CurHealth <= 0)
+        {
+            Kill();
+        }
+       
+    }
+
+    private void Kill()
+    {
+
+        Destroy(this.gameObject);
+        Debug.Log("Death");
+
+    }
+
+
+
+
 }
 
 

@@ -20,13 +20,13 @@ public class Obstacles : MonoBehaviour {
     void OnCollisionEnter(Collision other)
     {
 
-        PlayerMoves player = other.gameObject.GetComponentInParent<PlayerMoves>();
+        ITakeDamage player = other.gameObject.GetComponentInParent<ITakeDamage>();
         Debug.Log(player);
 
-        if(player)
+        if(player !=null)
         {
 
-            LevelManager.Instance.TakeDmg(Degats);
+            player.TakeDamage(Degats);
 
         }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour, ITakeDamage
+public class Projectile : MonoBehaviour
 {
     public float maxHealth = 100f;
     private float _currentHealth = 0f;

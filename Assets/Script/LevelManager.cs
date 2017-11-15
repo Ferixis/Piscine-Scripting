@@ -1,14 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
-    
+
 
 public class LevelManager : MonoBehaviour {
-
-    public int FullHealth = 3;
-    private int CurHealth ;
 
     // Score //
 
@@ -30,8 +25,6 @@ public class LevelManager : MonoBehaviour {
     {
 
         Instance = this;
-        CurHealth = FullHealth;
-
     }
 	// Use this for initialization
 	void Start () {
@@ -39,6 +32,7 @@ public class LevelManager : MonoBehaviour {
         _startedTime = DateTime.UtcNow;
 	}
 	
+<<<<<<< HEAD
  
     // Update is called once per frame
     void Update()
@@ -83,5 +77,7 @@ public class LevelManager : MonoBehaviour {
         PlayerMoves player = plane.GetComponentInParent<PlayerMoves>();
     }
 
+=======
+>>>>>>> ce787c4e676f09f0d7c14ab10b883874ff1f7e2d
     }
 

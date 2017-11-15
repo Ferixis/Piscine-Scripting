@@ -49,6 +49,10 @@ public class CameraManager : MonoBehaviour {
                 cameras[currentCameraIndex].gameObject.SetActive(true);
                 Debug.Log("Camera with name: " + cameras[currentCameraIndex].GetComponent<Camera>().name + ", is now enabled");
             }
+
+            
+
+
         }
     }
 }
