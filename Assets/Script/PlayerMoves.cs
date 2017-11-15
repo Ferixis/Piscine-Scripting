@@ -52,7 +52,7 @@ public class PlayerMoves : MonoBehaviour {
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
         }

@@ -977,7 +977,7 @@ MonoBehaviour:
   straffTime: 5
   projectileToShoot: {fileID: 1553744080704550, guid: 56f839bad76d9b0488acc06e2dceb7cc,
     type: 2}
-  projectileSpd: 40
+  projectileSpd: 30
   rightCanonSpawn: {fileID: 1789405887}
   leftCanonSpawn: {fileID: 183811366}
   shot: {fileID: 1871604373}
@@ -1924,18 +1924,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4503073105990602, guid: 56f839bad76d9b0488acc06e2dceb7cc, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.09211638
-      objectReference: {fileID: 0}
-    - target: {fileID: 4503073105990602, guid: 56f839bad76d9b0488acc06e2dceb7cc, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.080869764
-      objectReference: {fileID: 0}
-    - target: {fileID: 4503073105990602, guid: 56f839bad76d9b0488acc06e2dceb7cc, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.09211638
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56f839bad76d9b0488acc06e2dceb7cc, type: 2}
   m_IsPrefabParent: 0
@@ -2260,7 +2248,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bb96ca8c2f711fc46a4c3764b63c3d96, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.505
+  m_Volume: 1
   m_Pitch: 1.78
   Loop: 0
   Mute: 0
