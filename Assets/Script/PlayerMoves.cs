@@ -26,6 +26,10 @@ public class PlayerMoves : MonoBehaviour {
     private GameObject projectileRight;
     private GameObject projectileLeft;
 
+    // Speed Boost //
+
+
+
 
     void Awake () 
 	{
@@ -76,6 +80,11 @@ public class PlayerMoves : MonoBehaviour {
 
         Destroy(projectileRight, 2.0f);
         Destroy(projectileLeft, 2.0f);
+    }
+
+    public void Boost ()
+    {
+
     }
 }
 
