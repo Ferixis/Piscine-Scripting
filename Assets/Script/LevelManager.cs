@@ -60,7 +60,6 @@ public class LevelManager : MonoBehaviour {
         Debug.Log("HIT");
     }
 
-    private void KillPlayer
 
+    }
 
-}
