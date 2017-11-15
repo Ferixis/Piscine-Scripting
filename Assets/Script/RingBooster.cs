@@ -9,7 +9,6 @@ public class RingBooster : MonoBehaviour
         PlayerMoves player = other.gameObject.GetComponentInParent<PlayerMoves>();
         Debug.Log("Boosted");
         player.Boost();
-        
     }
 
 }
