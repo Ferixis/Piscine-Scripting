@@ -1012,6 +1012,7 @@ MonoBehaviour:
   rightCanonSpawn: {fileID: 1789405887}
   leftCanonSpawn: {fileID: 183811366}
   shot: {fileID: 1871604373}
+  boostValue: 0
 --- !u!54 &524996402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1268,7 +1269,7 @@ GameObject:
   - component: {fileID: 739253573}
   - component: {fileID: 739253572}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Bordure2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2753,7 +2754,7 @@ GameObject:
   - component: {fileID: 2070567817}
   - component: {fileID: 2070567816}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Bordure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
