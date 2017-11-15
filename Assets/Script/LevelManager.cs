@@ -10,6 +10,12 @@ public class LevelManager : MonoBehaviour {
     public int FullHealth = 3;
     private int CurHealth ;
 
+    // Score //
+
+    public GameObject plane;
+    public float scoreAdded;
+    public float actualScore;
+
     public static LevelManager Instance { get; private set; }
 
     public TimeSpan RunningTime
@@ -37,7 +43,7 @@ public class LevelManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+        Score();
 
         if (CurHealth >= FullHealth)
         {
@@ -48,7 +54,6 @@ public class LevelManager : MonoBehaviour {
         {
             CurHealth = 0;
             Debug.Log("You are Dead");
-
         }
     }
 
@@ -71,6 +76,11 @@ public class LevelManager : MonoBehaviour {
           
         }
 
+    }
+
+    void Score ()
+    {
+        PlayerMoves player = plane.GetComponentInParent<PlayerMoves>();
     }
 
     }
