@@ -335,6 +335,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1744927561817588, guid: ef2d7963a58371046b00363a5abc0785, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef2d7963a58371046b00363a5abc0785, type: 2}
   m_IsPrefabParent: 0
@@ -398,11 +402,6 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: e93280c4e6bcfd3448752b84a2b658c1, type: 2}
-    - target: {fileID: 54440761744221138, guid: b6f90f78fe60ca945a6bf26b8f567f39,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6f90f78fe60ca945a6bf26b8f567f39, type: 2}
   m_IsPrefabParent: 0
