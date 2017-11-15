@@ -82,6 +82,6 @@ public class LevelManager : MonoBehaviour {
     {
         PlayerMoves player = plane.GetComponentInParent<PlayerMoves>();
     }
-
+    //
     }
 
