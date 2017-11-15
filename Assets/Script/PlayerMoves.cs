@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMoves : MonoBehaviour {
 
+    // Move //
+
 	public float spdShip;
     public float maxSpd;
     public float straffMaxSpeed;
@@ -11,6 +13,8 @@ public class PlayerMoves : MonoBehaviour {
 
     private Rigidbody rbShip;
     private float smoothXVelocity;
+
+    // Shot //
 
     public GameObject projectileToShoot;
     public float projectileSpd;
