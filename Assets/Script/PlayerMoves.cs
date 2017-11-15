@@ -61,7 +61,7 @@ public class PlayerMoves : MonoBehaviour {
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
@@ -80,8 +80,8 @@ public class PlayerMoves : MonoBehaviour {
         projectileRight = Instantiate(projectileToShoot,rightCanonSpawn.position,rightCanonSpawn.rotation);
         projectileLeft = Instantiate(projectileToShoot, leftCanonSpawn.position, leftCanonSpawn.rotation);
 
-        projectileRight.GetComponent<Rigidbody>().velocity = projectileRight.transform.forward * projectileSpd;
-        projectileLeft.GetComponent<Rigidbody>().velocity = projectileLeft.transform.forward * projectileSpd;
+        projectileRight.GetComponent<Rigidbody>().velocity = transform.forward * rbShip.velocity.z * projectileSpd;
+        projectileLeft.GetComponent<Rigidbody>().velocity = transform.forward * rbShip.velocity.z * projectileSpd;
 
         Destroy(projectileRight, 2.0f);
         Destroy(projectileLeft, 2.0f);
