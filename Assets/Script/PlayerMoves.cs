@@ -26,10 +26,9 @@ public class PlayerMoves : MonoBehaviour {
     private GameObject projectileRight;
     private GameObject projectileLeft;
 
-    // Speed Boost //
+    // Speed Boost // 
 
-
-
+    public float boostValue;
 
     void Awake () 
 	{
@@ -64,7 +63,7 @@ public class PlayerMoves : MonoBehaviour {
 
     void LateUpdate () 
 	{
-		Debug.Log(rbShip.velocity.z);
+		//Debug.Log(rbShip.velocity.z);
 	}
 
     void Shoot ()
@@ -84,7 +83,8 @@ public class PlayerMoves : MonoBehaviour {
 
     public void Boost ()
     {
-
+        spdShip += boostValue;
+        //Debug.Log(spdShip);
     }
 }
 

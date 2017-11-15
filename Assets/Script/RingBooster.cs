@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class RingBooster : MonoBehaviour
 {
-    public GameObject player;
-
     void OnTriggerEnter(Collider other)
     {
         PlayerMoves player = other.gameObject.GetComponentInParent<PlayerMoves>();
+        Debug.Log("Boosted");
         player.Boost();
+        
     }
 
 }
