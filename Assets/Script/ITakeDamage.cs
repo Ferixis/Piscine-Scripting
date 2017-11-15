@@ -5,6 +5,6 @@ using UnityEngine;
 public interface ITakeDamage
 
 {
-    void TakeDamage(float damag,GameObject instigator);
+    void TakeDamage(int damage);
 
 }

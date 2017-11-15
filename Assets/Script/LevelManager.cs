@@ -1,14 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
-    
+
 
 public class LevelManager : MonoBehaviour {
-
-    public int FullHealth = 3;
-    private int CurHealth ;
 
     public static LevelManager Instance { get; private set; }
 
@@ -24,8 +19,6 @@ public class LevelManager : MonoBehaviour {
     {
 
         Instance = this;
-        CurHealth = FullHealth;
-
     }
 	// Use this for initialization
 	void Start () {
@@ -33,45 +26,5 @@ public class LevelManager : MonoBehaviour {
         _startedTime = DateTime.UtcNow;
 	}
 	
- 
-    // Update is called once per frame
-    void Update()
-    {
-
-
-        if (CurHealth >= FullHealth)
-        {
-            CurHealth = FullHealth;
-        }
-
-        if (CurHealth <= 0)
-        {
-            CurHealth = 0;
-            Debug.Log("You are Dead");
-
-        }
-    }
-
-
-    public void TakeDmg(int DamageTaken)
-    {
-
-        CurHealth -= DamageTaken;
-        Debug.Log("HIT");
-    }
-
-
-    private void KillPlayer()
-    {
-
-        if (CurHealth <= 0)
-        {
-
-            CurHealth = 0;
-          
-        }
-
-    }
-
     }
 
